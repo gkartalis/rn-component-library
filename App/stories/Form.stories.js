@@ -3,12 +3,23 @@ import {View, Text} from 'react-native';
 import {storiesOf} from '@storybook/react-native';
 import {action} from '@storybook/addon-actions';
 import {BufferView} from './decorators';
-import {Form, FieldWrapper, TextInput} from '../components/Form';
+import {Form, FieldWrapper, TextInput, Switch} from '../components/Form';
 
 const defaultTextInputProps = {
   label: 'Demo',
   onChangeText: action('onChangeText'),
 };
+
+storiesOf('Form/Switch', module)
+  .addDecorator(BufferView)
+  .add('default', () => <Switch label="Agree to Terms" value />)
+  .add('with error', () => (
+    <Switch
+      label="Agree to Terms"
+      message="You must agree to the Terms"
+      messageType="error"
+    />
+  ));
 
 storiesOf('Form/TextInput', module)
   .addDecorator(BufferView)
