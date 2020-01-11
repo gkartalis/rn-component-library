@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     paddingBottom: 10,
   },
-  boarder: {
+  border: {
     height: 1,
     backgroundColor: colors.border,
   },

@@ -5,6 +5,6 @@ import FieldWrapper from './FieldWrapper';
 
 export default ({label, message, messageType, ...rest}) => (
   <FieldWrapper label={label} message={message} messageType={messageType}>
-    <Switch />
+    <Switch {...rest} />
   </FieldWrapper>
 );
